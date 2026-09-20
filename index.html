@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Live Currency Calculator</title>
+    <link rel="shortcut icon" href="file_00000000e39081f8a191e88fedfbaecb.png" type="images/x-icon"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <!-- Live Status Indicator -->
+        <div class="api-status" id="apiStatus">🔄 Connecting to live rates...</div>
+
+        <!-- Currency Selector Top Bar -->
+        <div class="currency-device">
+            <select id="fromCurrency">
+                <option value="USD">🇺🇸 USD ($)</option>
+                <option value="EUR">🇪🇺 EUR (€)</option>
+                <option value="GBP">🇬🇧 GBP (£)</option>
+                <option value="NGN" selected>🇳🇬 NGN (₦)</option>
+                <option value="CAD">🇨🇦 CAD ($)</option>
+            </select>
+            <span class="arrow-swap">➔</span>
+            <select id="toCurrency">
+                <option value="USD" selected>🇺🇸 USD ($)</option>
+                <option value="EUR">🇪🇺 EUR (€)</option>
+                <option value="GBP">🇬🇧 GBP (£)</option>
+                <option value="NGN">🇳🇬 NGN (₦)</option>
+                <option value="CAD">🇨🇦 CAD ($)</option>
+            </select>
+        </div>
+
+        <!-- Iconic Famous White Display Screen -->
+        <input type="text" id="display" placeholder="0" readonly>
+        
+        <!-- Premium Minimalist Control Keys -->
+        <div class="buttons">
+            <button class="btn action" onclick="clearDisplay()">AC</button>
+            <button class="btn action" onclick="deleteLast()">DEL</button>
+            <button class="btn currency-btn" onclick="convertCurrency()">CONV</button>
+            <button class="btn operator" onclick="appendValue('/')">÷</button>
+
+            <button class="btn" onclick="appendValue('7')">7</button>
+            <button class="btn" onclick="appendValue('8')">8</button>
+            <button class="btn" onclick="appendValue('9')">9</button>
+            <button class="btn operator" onclick="appendValue('*')">×</button>
+
+            <button class="btn" onclick="appendValue('4')">4</button>
+            <button class="btn" onclick="appendValue('5') text">5</button>
+            <button class="btn" onclick="appendValue('6')">6</button>
+            <button class="btn operator" onclick="appendValue('-')">−</button>
+
+            <button class="btn" onclick="appendValue('1')">1</button>
+            <button class="btn" onclick="appendValue('2')">2</button>
+            <button class="btn" onclick="appendValue('3')">3</button>
+            <button class="btn operator" onclick="appendValue('+')">+</button>
+
+            <button class="btn double" onclick="appendValue('0')">0</button>
+            <button class="btn" onclick="appendValue('.')">.</button>
+            <button class="btn equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

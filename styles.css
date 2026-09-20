@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121212; /* Deep matte premium background */
+}
+
+.calculator {
+    background-color: #242424; /* Precision tool chassis gray */
+    padding: 24px;
+    border-radius: 32px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    width: 350px;
+    border: 1px solid #333;
+}
+
+/* API Status Indicator */
+.api-status {
+    font-size: 0.75rem;
+    color: #a0a0a0;
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+/* Currency Selectors */
+.currency-device {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    background-color: #1a1a1a;
+    padding: 10px 14px;
+    border-radius: 14px;
+}
+
+.currency-device select {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    width: 42%;
+}
+
+.currency-device select option {
+    background-color: #242424;
+    color: #ffffff;
+}
+
+.arrow-swap {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Famous Crisp White Display Screen */
+#display {
+    width: 100%;
+    height: 90px;
+    border: none;
+    outline: none;
+    background-color: #ffffff; /* Stark iconic white */
+    color: #000000;            /* Rich high-contrast black text */
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: right;
+    padding: 10px 24px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons Grid Layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+/* Circular Minimalist Buttons */
+.btn {
+    height: 64px;
+    border: none;
+    outline: none;
+    border-radius: 50%; /* Perfect circular design */
+    font-size: 1.4rem;
+    font-weight: 500;
+    background-color: #3a3a3c; /* Classic slate key cap */
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.15s, transform 0.05s;
+}
+
+.btn:hover {
+    background-color: #4a4a4c;
+}
+
+.btn:active {
+    transform: scale(0.92);
+}
+
+/* Function & Utility Layout Overrides */
+.btn.double {
+    grid-column: span 2;
+    border-radius: 32px; /* Oblong capsule button for 0 */
+    text-align: left;
+    padding-left: 26px;
+}
+
+/* Classic Iconography Color Palette */
+.btn.operator {
+    background-color: #ff9f0a; /* Signature Premium Orange */
+    color: #ffffff;
+}
+
+.btn.operator:hover {
+    background-color: #fca822;
+}
+
+.btn.action {
+    background-color: #a5a5a5; /* Classic Light Gray control key caps */
+    color: #000000;
+}
+
+.btn.action:hover {
+    background-color: #b5b5b5;
+}
+
+.btn.currency-btn {
+    background-color: #007aff; /* Crisp Royal Blue Accent */
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.btn.currency-btn:hover {
+    background-color: #1a87ff;
+}
+
+.btn.equal {
+    background-color: #ff9f0a; /* Kept matching standard operator styling */
+}
